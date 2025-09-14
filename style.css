@@ -1,0 +1,72 @@
+ body {
+      margin: 0;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .box {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      background: #801942; 
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+    }
+
+    .l1 { 
+        top: 15%; 
+        left: 20px;  
+        animation-name: toRight; 
+        animation-delay: 0s; 
+    }
+    .r1 { 
+        top: 25%; 
+        right: 20px; 
+        animation-name: toLeft;  
+        animation-delay: 2.2s; 
+    }
+
+    .l2 { top: 45%; 
+        left: 20px;  
+        animation-name: toRight; 
+        animation-delay: 4.4s; 
+    }
+    .r2 { top: 55%; 
+        right: 20px; 
+        animation-name: toLeft;  
+        animation-delay: 6.6s; 
+    }
+
+    .l3 { 
+        top: 75%; 
+        left: 20px; 
+        animation-name: toRight; 
+        animation-delay: 8.8s; 
+    }
+    .r3 { 
+        top: 85%; 
+        right: 20px; 
+        animation-name: toLeft;  
+        animation-delay: 11s; 
+    }
+
+    /* حركة من يسار ليمين */
+    @keyframes toRight {
+      from { left: 20px; }
+      to   { left: calc(100% - 70px); }
+    }
+
+    /* حركة من يمين ليسار */
+    @keyframes toLeft {
+      from { right: 20px; }
+      to   { right: calc(100% - 70px); }
+    }
